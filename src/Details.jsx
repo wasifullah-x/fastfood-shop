@@ -1,6 +1,11 @@
 import "./Details.css"
 
-function Details(){
+function Details({selectedItems}){
+
+    let total = selectedItems.reduce((sum, item) => {
+        return sum + item.price * item.quantity 
+    }, 0);
+
     return(
         <>
             <section className="summary">
@@ -13,15 +18,26 @@ function Details(){
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1x Real Madrid</td>
-                            <td>$ 119.99</td>
-                        </tr>
+                        {
+                            selectedItems.map(item => {
+                                return(
+
+                                        <tr key={item.id}>
+                                            <td>{item.quantity}x {item.name}</td>
+                                            <td>Rs {item.price*item.quantity}</td>
+                                        </tr>        
+                            
+                                );
+                            })
+                            
+                        }
+                        {
+                            <tr>
+                                    <th>Total</th>
+                                    <th>Rs {total}</th>
+                            </tr>
+                        }
                         
-                        <tr>
-                            <th>Total</th>
-                            <th>$ 119.99</th>
-                        </tr>
                     </tbody>
                 </table>
             </section>

@@ -9,7 +9,7 @@ function App() {
     [
       {
         id : 1,
-        photo : "./pizza.jpeg",
+        photo : "./pizza.png",
         name : "Pizza",
         price : 1800,
         isSelected : false,
@@ -18,7 +18,7 @@ function App() {
       },
       {
         id : 2,
-        photo : "./burger.jpeg",
+        photo : "./burger.png",
         name : "Burger",
         price : 850,
         isSelected : false,
@@ -27,7 +27,7 @@ function App() {
       },
       {
         id : 3,
-        photo : "./sandwich.jpeg",
+        photo : "./sandwich.png",
         name : "Sandwich",
         price : 400,
         isSelected : false,
@@ -36,7 +36,7 @@ function App() {
       },
       {
         id : 4,
-        photo : "./friedchicken.jpeg",
+        photo : "./chicken.png",
         name : "Fried Chicken",
         price : 650,
         isSelected : false,
@@ -45,7 +45,7 @@ function App() {
       },
       {
         id : 5,
-        photo : "./fries.jpeg",
+        photo : "./fries.png",
         name : "Pizza",
         price : 300,
         isSelected : false,
@@ -54,25 +54,46 @@ function App() {
       },
       {
         id : 6,
-        photo : "./drink.jpeg",
+        photo : "./drink.png",
         name : "Drink",
         price : 150,
         isSelected : false,
         quantity : 1,
-        inCart : false 
+        inCart : false
       }
     ]
   );
 
-  const selectedItems = items.map((item) => item.inCart === true);
+  const selectedItems = items.filter(item => item.inCart === true);
+
+  const handleFood = (id) => {
+    let item = items.filter(item => item.id === id)[0];
+    item.inCart = !item.inCart;
+    setItems(items.map(food => food.id===id ? item : food));
+  }
+
+  const handleQuantity = (e, id, inc) => {
+    e.stopPropagation();
+    let item = items.filter(item => item.id === id)[0];
+    item.quantity += inc;
+    console.log(item.quantity);
+    setItems(items.map(food => food.id === id ? item : food));
+  }
+
 
   return (
     <>
       <h1>Fast Food Shop</h1>
-      <Food items={items}></Food>
+      <Food 
+        items={items}
+        selectFood = {(id) => handleFood(id)}
+        selectQuantity = {(e, id, inc) => handleQuantity(e, id, inc)}
+      />
       {
         selectedItems.length > 0 &&
-          <Details/>
+          <Details
+              selectedItems={selectedItems}
+          />
       }
     </>
   )

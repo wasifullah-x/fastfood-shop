@@ -1,6 +1,7 @@
 import "./Food.css"
 
-function Food({items}){
+function Food({items, selectFood, selectQuantity}){
+
 
     return(
         <>
@@ -9,7 +10,7 @@ function Food({items}){
                 {
                     items.map(item => {
                         return(
-                            <div key={item.id} className={`food ${item.inCart ? 'selected' : ''}`}>
+                            <div onClick={() => selectFood(item.id)} key={item.id} className={`food ${item.inCart ? 'selected' : ''}`}>
 
                             <div className="food-img">
                                 <img src={item.photo} />
@@ -25,9 +26,9 @@ function Food({items}){
                                     item.inCart  && 
                                      
                                      <div className="food-quantity-area">
-                                        <button className="minus">-</button>
+                                        <button disabled={item.quantity <= 1} onClick={(e) => selectQuantity(e, item.id, -1)} className="minus">-</button>
                                         <span className="food-quantity">{item.quantity}</span>
-                                        <button className="plus">+</button>
+                                        <button onClick={(e) => selectQuantity(e, item.id, +1)} className="plus">+</button>
                                     </div>
                                 }
 
