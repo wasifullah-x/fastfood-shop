@@ -1,4 +1,4 @@
-```markdown
+
 # Fast Food Shop 🍔
 
 A simple React-based Fast Food Shop interface where users can:
