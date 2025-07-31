@@ -1,0 +1,25 @@
+
+section.summary {
+  background-color: rgb(131, 255, 103);
+  padding: 30px;
+  min-height: 200px;
+  min-width: 200px;
+  text-align: center;
+}
+
+section.summary strong {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+section.summary table {
+  width: 100%;
+  padding-top: 12px;
+  font-size: 20px;
+  margin: auto;
+}
+
+section.summary table tbody tr:last-of-type th {
+  border-top: 1px solid black;
+  padding: 10px 0;
+}

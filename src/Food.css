@@ -1,0 +1,104 @@
+section.items{
+    margin: 10px auto 40px;
+    padding-top: 25px;
+    background-color: rgb(238, 252, 137);
+    border-radius: 28px;
+    max-width: 840px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 25px;
+}
+
+section.items .food{
+    width: 250px;
+    display: flex;
+    flex: 0 0 calc(33% - 24px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(39, 40, 40);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+section.items .food.selected{
+    width: 250px;
+    border: 5px solid rgb(167, 67, 67);
+}
+
+section.items .food .food-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.items .food .food-img img{
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+}
+
+section.items .food .food-description{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.items .food .food-description .food-name{
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: hsl(0, 2%, 68%);
+}
+
+section.items .food .food-description .food-price{
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+section.items .food .food-description .food-quantity-area{
+    background-color: gray;
+    padding: 10px 15px; 
+    display: flex;
+    gap: 10px;
+    border-radius: 20px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+section.items .food .food-description .food-quantity-area button{
+    background-color: rgb(50, 48, 48);
+    color: white;
+    padding: 5px 15px;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+section.items .food .food-description .food-quantity-area button:hover{
+    color: rgb(0, 0, 0);
+    background-color: hsl(0, 0%, 68%);
+    padding: 5px 15px;
+    border: 2px solid rgb(50, 48, 48);
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+section.items .food .food-description .food-quantity-area .food-quantity{
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+}
+
+
+
