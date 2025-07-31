@@ -1,12 +1,41 @@
-# React + Vite
+```markdown
+# Fast Food Shop 🍔
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React-based Fast Food Shop interface where users can:
 
-Currently, two official plugins are available:
+- View a list of fast food items
+- Add items to the cart by clicking on them
+- Update item quantities directly in the cart using increment/decrement buttons
+- See real-time cart updates as quantities change
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- 📦 **Add to Cart**: Click on any food item to add it to the cart  
+- 🔢 **Quantity Controls**: Easily update item quantities  
+- ♻️ **Dynamic Cart**: Cart updates instantly with any changes  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- **React** (Frontend library)
+- **CSS** (for basic styling, optional)
+
+## Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/fast-food-shop.git
+   cd fast-food-shop
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the app:
+   ```bash
+   npm start dev
+   ```
+
+The app will be live at `http://localhost:3000`
+
