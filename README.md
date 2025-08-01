@@ -37,5 +37,5 @@ A simple React-based Fast Food Shop interface where users can:
    npm start dev
    ```
 
-The app will be live at `http://localhost:3000`
+The app will be live at `http://localhost:5173`
 
